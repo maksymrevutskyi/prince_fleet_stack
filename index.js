@@ -97,7 +97,6 @@ app.post('/fileupload', cpUpload, async (req, res) => {
     const xmloptions = { ignoreAttributes: false, attributeNamePrefix: "@_"};
     const parser = new XMLParser(xmloptions);
     let jObj = parser.parse(xmlData);
-    console.log(jObj['manifest']['application']);
     jObj['manifest']['application']['@_android:label'] = req.body['appname'];
     const builder = new XMLBuilder(xmloptions);
     fs.writeFileSync('./android/app/src/main/AndroidManifest.xml', builder.build(jObj));
