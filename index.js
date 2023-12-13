@@ -115,7 +115,7 @@ app.post('/fileupload', cpUpload, async (req, res) => {
     console.log('flutter build apk debug finished');
     // res.redirect('/projects/temp/build/app/outputs/bundle/release/app-release.aab');
     // res.redirect();
-    res.sendFile('app-debug.apk', {root: path.join(__dirname, 'projects', 'temp', 'build', 'app', 'outputs', 'flutter-apk', 'debug')});
+    res.sendFile('app-debug.apk', {root: path.join(__dirname, 'projects', 'temp', 'build', 'app', 'outputs', 'flutter-apk')});
 });
 
 // Start the server
