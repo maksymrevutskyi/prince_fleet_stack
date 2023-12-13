@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "268164031420",
+    "project_id": "fleetstack-7766a",
+    "storage_bucket": "fleetstack-7766a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268164031420:android:f94246e43c648eeaf381b9",
+        "android_client_info": {
+          "package_name": "com.stack.fleetstack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268164031420-spl4d0onb0g8vep7dtqdap86o75omuk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB13cFszmOBS3WxziGlAwXBsId3tVlsRaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268164031420-spl4d0onb0g8vep7dtqdap86o75omuk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
