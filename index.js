@@ -111,7 +111,11 @@ app.post('/fileupload', cpUpload, async (req, res) => {
     console.log('google-services.json file changed');
     //flutter build 
     cp.exec('flutter build appbundle');
+    console.log('flutter build appbundle finished');
+    cp.exec('flutter build apk --debug');
+    console.log('flutter build apk debug finished');
     res.redirect('/');
+    // res.redirect('projects/temp/')
 });
 
 // Start the server
@@ -120,5 +124,5 @@ app.post('/fileupload', cpUpload, async (req, res) => {
  * @event
  */
 app.listen(3000, () => {
-    console.log('server is running on port http://localhost:3001');
+    console.log('server is running on port http://localhost:3000');
 });
