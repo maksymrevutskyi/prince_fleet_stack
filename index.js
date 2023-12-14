@@ -11,6 +11,7 @@ const {XMLParser, XMLBuilder} = require('fast-xml-parser');
 const sql = require('mssql');
 const session = require('express-session');
 const passport = require('passport');
+
 const app = express();
 let pool, user;
 // Middleware setup
@@ -37,7 +38,7 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 passport.use(new GoogleStrategy({
     clientID: '72208994701-idvp0cl0oio8u8klo04lh4hvmij3qdc0.apps.googleusercontent.com',
     clientSecret: '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',
-    callbackURL: "http://localhost:3000/auth/google/callback"
+    callbackURL: "http://studio.fleetstackglobal.com/auth/google/callback"
 }, async (accessToken, refreshToken, profile, done) => {
     let users = await pool.request()
     .input('Email', profile.emails[0].value)
@@ -90,6 +91,10 @@ app.get('/buildapk/:id', async(req, res) => {
     }
 });
 
+app.get('/downloadcode/:id', async(req, res) => {
+
+
+});
 app.get('/home', async (req, res) => {
     try {
         let projects = await pool.request().query('SELECT * from Projects');
@@ -311,6 +316,6 @@ app.post('/project/change/:id', cpUpload, async (req, res) => {
  * @description Start the server and listen on port 3001.
  * @event
  */
-app.listen(3000, () => {
-    console.log('server is running on port http://localhost:3000');
+app.listen(80, () => {
+    console.log('server is running on port http://localhost');
 });
